@@ -4,23 +4,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    nodes: [{
-      name: 'div',
-      attrs: {
-        class: 'div_class',
-        style: 'line-height: 60px; color: red;'
-      },
-      children: [{
-        type: 'text',
-        text: 'Hello&nbsp;World!'
-      }]
-    }],
     mainData:[
       {
         name:"扫一扫",
         style:"margin:20px 0"
       },{
-        name:"省流量模式"
+        name:"省流量模式",
+        switchActive: true
       },{
         name: "消息提醒"
       }, {
@@ -46,6 +36,9 @@ Page({
   clickMoreCell(e){
     let { name } = e.currentTarget.dataset.item
     console.debug(name)
+  },
+  switchChange(e){
+    console.debug(e.detail.value)
   },
   
   tap() {

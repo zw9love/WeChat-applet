@@ -1,8 +1,10 @@
 {
   "pages": [
     "pages/more/more",
+    "pages/seller/seller",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/mine/mine"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,13 +23,13 @@
       },
       {
         "text": "商家",
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/seller/seller",
         "iconPath": "assets/img/icon_tabbar_merchant_normal.png",
         "selectedIconPath": "assets/img/icon_tabbar_merchant_selected.png"
       },
       {
         "text": "我的",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/mine/mine",
         "iconPath": "assets/img/icon_tabbar_mine.png",
         "selectedIconPath": "assets/img/icon_tabbar_mine_selected.png"
       },

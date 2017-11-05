@@ -1,4 +1,7 @@
 //app.js
+
+// import
+
 App({
   onLaunch: function ({ path, query, scene, referrerInfo}) {
     //console.log('path: ' + path)

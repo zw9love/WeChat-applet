@@ -1,0 +1,12 @@
+<!--components/moreCell/moreCell.wxml-->
+<template name="moreCell">
+    <view 
+    class="more-cell" 
+    >
+        <text>{{data.name}}</text>
+        <view class="more-cell-right">
+          <!-- <switch bindchange="switchChange" wx:if="{{item.switchActive}}" checked/> -->
+          <image src="../../assets/img/icon_cell_rightarrow.png"></image>
+        </view>
+    </view>
+</template>

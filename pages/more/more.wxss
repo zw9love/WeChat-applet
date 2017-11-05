@@ -1,3 +1,5 @@
+@import "../../components/moreCell/moreCell.wxss";
+
 .more-container{
   background: #eee;
     /* flex-direction: row; */
@@ -5,32 +7,3 @@
 }
 
 
-.more-cell{
-  width:100%;
-  height:50px;
-  background-color: #fff;  
-  line-height: 50px; 
-  box-sizing: border-box;
-  padding:0 10px;
-  font-size: 16px;
-  border-top: 1px solid #eee;
-  position: relative;
-  /* align-items: center;
-  justify-content: center;
-  flex-direction: column;  */
-  /* border-bottom: 1px solid #ccc; */
-}
-
-.more-cell image{
-  width: 16px;
-  height: 26px;
-   /* display: inline-block; 
-   vertical-align: middle; */
-   float: right;
-   margin-top:12px;
-
-}
-
-.more-cell-first{
-  margin: 20px 0;
-}

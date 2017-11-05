@@ -2,7 +2,7 @@
 //获取应用实例
 const app = getApp()
 // console.log(app.globalData)
-console.debug(app)
+// console.debug(app)
 Page({
   data: {
     motto: '北京欢迎你',

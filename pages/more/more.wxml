@@ -1,5 +1,8 @@
+<import src="../../components/moreCell/moreCell.wxml"/>
+
 <scroll-view scroll-y  class="more-container">
-    <view 
+    <template is="moreCell" data="{{item}}" wx:for="{{mainData}}"/>
+    <!-- <view 
     class="more-cell" 
     wx:for="{{mainData}}" 
     wx:key="{{index}}" 
@@ -8,6 +11,9 @@
     data-item="{{item}}"
     >
         <text>{{item.name}}</text>
-        <image src="../../assets/img/icon_cell_rightarrow.png"></image>
-    </view>
+        <view class="more-cell-right">
+          <switch bindchange="switchChange" wx:if="{{item.switchActive}}" checked/>
+          <image src="../../assets/img/icon_cell_rightarrow.png" wx:else></image>
+        </view>
+    </view> -->
   </scroll-view>
