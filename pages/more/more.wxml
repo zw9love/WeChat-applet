@@ -1,0 +1,13 @@
+<scroll-view scroll-y  class="more-container">
+    <view 
+    class="more-cell" 
+    wx:for="{{mainData}}" 
+    wx:key="{{index}}" 
+    style="{{item.style}}"
+    bindtap="clickMoreCell"
+    data-item="{{item}}"
+    >
+        <text>{{item.name}}</text>
+        <image src="../../assets/img/icon_cell_rightarrow.png"></image>
+    </view>
+  </scroll-view>
