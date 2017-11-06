@@ -1,8 +1,9 @@
 //app.js
 
-// import
+// import {moreCell} from 'components/moreCell/moreCell.js'
 
 App({
+  // moreCell,
   onLaunch: function ({ path, query, scene, referrerInfo}) {
     //console.log('path: ' + path)
     //console.log(query)
@@ -10,7 +11,7 @@ App({
     //console.log(referrerInfo)
     // console.log('referrerInfo.appId: ' + referrerInfo.appId)
     // console.log('referrerInfo.extraData: ' + referrerInfo.extraData)
-    console.log(this)
+    // console.log(this)
     // console.log(this.getCurrentPages())
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -46,6 +47,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    name: '大熊'
+    name: '大熊111'
   }
 })

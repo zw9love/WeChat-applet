@@ -1,10 +1,25 @@
 /**app.wxss**/
+/* more-cell样式  */
+@import "/components/moreCell/moreCell.wxss";
+
+
+Page{
+  background: #eee;
+}
+
+.page-container{
+  /* background: #eee; */
+  height: 100%;
+}
+
+
 .container {
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; 
   padding: 200rpx 0;
   box-sizing: border-box;
+  /* background: #eee; */
 } 

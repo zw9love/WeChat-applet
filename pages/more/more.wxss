@@ -1,5 +1,3 @@
-@import "../../components/moreCell/moreCell.wxss";
-
 .more-container{
   background: #eee;
     /* flex-direction: row; */

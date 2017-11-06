@@ -1,5 +1,7 @@
-Page({
+// import moreCell from "../../components/moreCell/moreCell.js"
 
+Page({
+  // moreCell,
   /**
    * 页面的初始数据
    */
@@ -33,6 +35,11 @@ Page({
       }
     ]
   },
+  components: {
+      moreCell: {
+        text: "moreCell demo"
+      }
+  },
   clickMoreCell(e){
     let { name } = e.currentTarget.dataset.item
     console.debug(name)
@@ -49,7 +56,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    // console.log(this.childrens)
+    let app = getApp()
+    // console.debug(getCurrentPages())
+    // console.log(app.moreCell)
+    // new app.moreCell()
   },
 
   /**

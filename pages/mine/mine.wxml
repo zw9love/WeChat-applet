@@ -1,0 +1,42 @@
+<!--pages/mine/mine.wxml-->
+<scroll-view scroll-y class="page-container">
+   <!-- <moreCell inner-text="Some text"></moreCell>  -->
+  <!-- <template is="moreCell" data="{{item}}" wx:for="{{mainData}}" wx:key="{{index}}" inner-text="Some text"/> -->
+  <view class="header">
+    <image src="../../assets/img/wei.png"></image>
+    <view class="header-textView">
+      <text>臧杰電商平台</text>
+    </view>
+    <!-- <view></view> -->
+    <view class="header-right">
+      <image src="../../assets/img/icon_cell_rightarrow.png" class="header-right-img"></image>
+    </view>
+  </view>
+  <view class="order-container">
+    <view class="order-container-cell" wx:for="{{orderData}}">
+      <image src="{{item.src}}"></image>
+      <view>
+        <text>{{item.info}}</text>
+      </view>
+    </view>
+  </view>
+   <view 
+    class="more-cell" 
+    wx:for="{{mainData}}" 
+    wx:key="{{index}}" 
+    style="{{item.style}}"
+    bindtap="clickMoreCell"
+    data-item="{{item}}"
+    >
+        <image src="{{item.src}}" class="more-cell-image"></image>
+        <text>{{item.name}}</text>
+        <view class="more-cell-right">
+          <view class="more-cell-right-info">
+            <image src="{{item.rightSrc}}" wx:if="{{item.rightSrc}}"></image>
+            <text wx:else>{{item.rightInfo}}</text>
+          </view>
+          <switch bindchange="switchChange" wx:if="{{item.switchActive}}" checked/>
+          <image src="../../assets/img/icon_cell_rightarrow.png" wx:else></image>
+        </view>
+    </view> 
+</scroll-view>
