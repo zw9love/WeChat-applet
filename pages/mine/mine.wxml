@@ -41,11 +41,11 @@
         <text>{{item.name}}</text>
         <view class="more-cell-right">
           <view class="more-cell-right-info">
-            <image src="{{item.rightSrc}}" wx:if="{{item.rightSrc}}"></image>
+            <image src="{{item.rightSrc}}" wx:if="{{item.rightSrc}}"  class="more-cell-right-img"></image>
             <text wx:else>{{item.rightInfo}}</text>
           </view>
           <switch bindchange="switchChange" wx:if="{{item.switchActive}}" checked/>
-          <image src="../../assets/img/icon_cell_rightarrow.png" wx:else></image>
+          <image src="../../assets/img/icon_cell_rightarrow.png" wx:else class="more-cell-right-arrow"></image>
         </view>
     </view> 
 </scroll-view>

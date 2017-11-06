@@ -20,7 +20,7 @@
   height:50px;
 }
 
-.more-cell-right image{
+.more-cell-right-arrow{
   width: 8px;
   height: 13px;
    /* display: inline-block; 
@@ -47,7 +47,7 @@
   justify-content: center; */
 }
 
-.more-cell-right-info image{
+.more-cell-right-img{
   width: 24px;
   height: 13px;
 }

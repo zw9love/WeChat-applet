@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    hidden: true,
     mainData:[
       {
         name:"扫一扫",
@@ -34,6 +35,23 @@ Page({
         name: "关于威哥"
       }
     ]
+  },
+  loadingChange: function () {
+    this.setData({
+      hidden: true
+    })
+  },
+  loadingTap: function () {
+    this.setData({
+      hidden: false
+    })
+
+    var that = this
+    setTimeout(function () {
+      that.setData({
+        hidden: true
+      })
+    }, 1500)
   },
   components: {
       moreCell: {
