@@ -38,11 +38,16 @@ Page({
         rightInfo: "轻松开店招财进宝"
       }
     ],
-    orderData:[
-      { src: '../../assets/img/order1.png', info: '待付款'},
+    orderData: [
+      { src: '../../assets/img/order1.png', info: '待付款' },
       { src: '../../assets/img/order2.png', info: '待使用' },
       { src: '../../assets/img/order3.png', info: '待评价' },
       { src: '../../assets/img/order4.png', info: '退款/售后' }
+    ],
+    userInfoData: [
+      { name: '威哥卷', num: 100 },
+      { name: '评价', num: 99 },
+      { name: '收藏', num: 88 },
     ]
   },
 
@@ -50,55 +55,55 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })

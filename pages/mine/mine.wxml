@@ -12,6 +12,15 @@
       <image src="../../assets/img/icon_cell_rightarrow.png" class="header-right-img"></image>
     </view>
   </view>
+  <view class="userInfo">
+    <view class="userInfo-wrapper">
+        <view class="userInfo-cell" wx:for="{{userInfoData}}">
+          <text>{{item.num}}</text>
+          <text>{{item.name}}</text>
+          <view class="userInfo-cell-line" wx:if="{{index < 2}}"></view>
+        </view>
+    </view>
+  </view>
   <view class="order-container">
     <view class="order-container-cell" wx:for="{{orderData}}">
       <image src="{{item.src}}"></image>
