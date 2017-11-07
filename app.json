@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/mine/mine",
-    "pages/more/more",
-    "pages/seller/seller",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/more/more",
+    "pages/mine/mine",
+    "pages/seller/seller",
+    "pages/logs/logs",
+    "pages/messageRemind/messageRemind"
   ],
   "window": {
     "backgroundTextStyle": "light",

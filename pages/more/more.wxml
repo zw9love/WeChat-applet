@@ -1,10 +1,6 @@
 <!-- <import src="../../components/moreCell/moreCell.wxml" /> -->
 
 <scroll-view scroll-y class="page-container">
-  <loading hidden="{{hidden}}" bindchange="loadingChange">
-    加载中...
-  </loading>
-  <button type="default" bindtap="loadingTap">点击弹出loading</button>
    <!-- <moreCell inner-text="Some text"></moreCell>  -->
   <!-- <template is="moreCell" data="{{item}}" wx:for="{{mainData}}" wx:key="{{index}}" inner-text="Some text"/> -->
    <view 
@@ -15,10 +11,12 @@
     bindtap="clickMoreCell"
     data-item="{{item}}"
     >
+    <navigator url="{{item.url || '/pages/more/more'}}" class="more-cell-wapper">
         <text>{{item.name}}</text>
         <view class="more-cell-right">
           <switch bindchange="switchChange" wx:if="{{item.switchActive}}" checked/>
           <image src="../../assets/img/icon_cell_rightarrow.png" wx:else class="more-cell-right-arrow"></image>
         </view>
+        </navigator>
     </view> 
 </scroll-view>

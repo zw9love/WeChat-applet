@@ -1,5 +1,6 @@
 /**index.wxss**/
-.userinfo {
+
+/* .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,4 +19,122 @@
 
 .usermotto {
   margin-top: 200px;
+} */
+
+.header {
+  height: 46px;
+  background-color: #ff6100;
+  /* border-top: 1px solid #fff; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-img{
+  width:24px;
+  height: 24px;
+}
+
+.header-text{
+  font-size: 14px;
+  color: #fff;
+}
+
+.header-input-wrapper{
+  width: 220px;
+  border-radius: 15px; 
+  border: 1px solid #fff;
+  padding:0 20px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, .2)
+}
+
+.header-input{
+  /* height: 20px; */
+  /* border: 1px solid #fff; */
+  /* border-radius: 20px; */
+  font-size: 12px;
+  width: 180px;
+  color: #fff;
+  /* text-indent: 20px; */
+}
+
+.header-input-placeholder{
+  color: #fff;
+  font-size: 12px;
+}
+
+.main {
+}
+
+.main .main-carousel {
+  height: 180px;
+  background-color: #fff;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.carousel-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.carousel-cell-img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.main-love{
+  margin-top: 20px;
+}
+
+.main-love-cell{
+  height: 100px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.main-love-cell-img{
+  width: 95px;
+  height: 80px;
+  border-radius: 6px;
+}
+
+.main-love-text{
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+  margin-left: 10px;
+}
+
+.main-love-text-top{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+.main-love-text-middle{
+  color: #999;
+  margin: 10px 0;
+}
+
+.main-love-text-bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
 }

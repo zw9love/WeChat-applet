@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<!-- <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -10,4 +10,58 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+</view> -->
+<view>
+  <view class="header">
+    <navigator url="/pages/index/index" class="header-text">
+      <text>北京 V</text>
+    </navigator>
+    <view class="header-input-wrapper">
+      <input placeholder="输入商家、种类、商圈" auto-focus class="header-input" placeholder-class="header-input-placeholder" />
+    </view>
+    <view>
+      <image src="../../assets/img/icon_homepage_scan.png" class="header-img"></image>
+    </view>
+    <view>
+      <image src="../../assets/img/icon_homepage_message.png" class="header-img"></image>
+    </view>
+  </view>
+
+  <view class="main">
+    <view class="main-carousel">
+      <swiper indicator-dots="{{indicatorDots}}" indicator-color="#ccc" indicator-active-color="#FF6100" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height: 180px">
+        <block wx:for="{{carouselData}}" wx:for-item="entry">
+          <swiper-item>
+            <view class="carousel-container" style="">
+              <view wx:for="{{entry}}" wx:for-item="item" class="carousel-cell" style="width:{{screenWidth / 5}}px;height: 80px">
+                <image src="{{item.src}}" class="carousel-cell-img"></image>
+                <text>{{item.name}}</text>
+              </view>
+            </view>
+            <!-- <image src="{{item}}" class="slide-image" width="100%" height="150" /> -->
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class="main-love">
+      <navigator url="{{item.url || '/pages/index/index'}}" class="main-love-cell" wx:for="{{loveData}}" wx:key="{{index}}">
+        <image src="{{item.src}}" class="main-love-cell-img"></image>
+        <view class="main-love-text">
+          <view class="main-love-text-top">
+            <text>{{item.title}}</text>
+            <text style="color:#999">>{{item.index}}</text>
+          </view>
+          <view class="main-love-text-middle">
+            <text>{{item.info}}</text>
+          </view>
+          <view class="main-love-text-bottom">
+            <text style="color:#FF6100">￥{{item.price}}</text>
+            <text>已售{{item.sellNum}}</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
 </view>

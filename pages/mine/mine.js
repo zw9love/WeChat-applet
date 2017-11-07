@@ -51,6 +51,14 @@ Page({
     ]
   },
 
+  clickMoreCell(e) {
+    let { name, fnName } = e.currentTarget.dataset.item
+    console.debug(e.currentTarget.dataset.item)
+    if (fnName) {
+      this[fnName]()
+    }
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

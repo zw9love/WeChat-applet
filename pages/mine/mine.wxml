@@ -1,11 +1,11 @@
 <!--pages/mine/mine.wxml-->
 <scroll-view scroll-y class="page-container">
-   <!-- <moreCell inner-text="Some text"></moreCell>  -->
+  <!-- <moreCell inner-text="Some text"></moreCell>  -->
   <!-- <template is="moreCell" data="{{item}}" wx:for="{{mainData}}" wx:key="{{index}}" inner-text="Some text"/> -->
   <view class="header">
     <image src="../../assets/img/wei.png"></image>
     <view class="header-textView">
-      <text>臧杰電商平台</text>
+      <navigator url="/pages/mine/mine">臧杰電商平台</navigator>
     </view>
     <!-- <view></view> -->
     <view class="header-right">
@@ -14,38 +14,33 @@
   </view>
   <view class="userInfo">
     <view class="userInfo-wrapper">
-        <view class="userInfo-cell" wx:for="{{userInfoData}}">
-          <text>{{item.num}}</text>
-          <text>{{item.name}}</text>
-          <view class="userInfo-cell-line" wx:if="{{index < 2}}"></view>
-        </view>
+      <navigator url="{{item.url || '/pages/mine/mine'}}" class="userInfo-cell" wx:for="{{userInfoData}}" wx:key="{{index}}">
+        <text>{{item.num}}</text>
+        <text>{{item.name}}</text>
+        <view class="userInfo-cell-line" wx:if="{{index < 2}}"></view>
+      </navigator>
     </view>
   </view>
   <view class="order-container">
-    <view class="order-container-cell" wx:for="{{orderData}}">
+    <navigator url="{{item.url || '/pages/mine/mine'}}" class="order-container-cell" wx:for="{{orderData}}" wx:key="{{index}}">
       <image src="{{item.src}}"></image>
       <view>
         <text>{{item.info}}</text>
       </view>
-    </view>
+    </navigator>
   </view>
-   <view 
-    class="more-cell" 
-    wx:for="{{mainData}}" 
-    wx:key="{{index}}" 
-    style="{{item.style}}"
-    bindtap="clickMoreCell"
-    data-item="{{item}}"
-    >
-        <image src="{{item.src}}" class="more-cell-image"></image>
-        <text>{{item.name}}</text>
-        <view class="more-cell-right">
-          <view class="more-cell-right-info">
-            <image src="{{item.rightSrc}}" wx:if="{{item.rightSrc}}"  class="more-cell-right-img"></image>
-            <text wx:else>{{item.rightInfo}}</text>
-          </view>
-          <switch bindchange="switchChange" wx:if="{{item.switchActive}}" checked/>
-          <image src="../../assets/img/icon_cell_rightarrow.png" wx:else class="more-cell-right-arrow"></image>
+  <view class="more-cell" wx:for="{{mainData}}" wx:key="{{index}}" style="{{item.style}}" bindtap="clickMoreCell" data-item="{{item}}">
+    <navigator url="{{item.url || '/pages/mine/mine'}}" class="more-cell-wapper">
+      <image src="{{item.src}}" class="more-cell-image"></image>
+      <text>{{item.name}}</text>
+      <view class="more-cell-right">
+        <view class="more-cell-right-info">
+          <image src="{{item.rightSrc}}" wx:if="{{item.rightSrc}}" class="more-cell-right-img"></image>
+          <text wx:else>{{item.rightInfo}}</text>
         </view>
-    </view> 
+        <switch bindchange="switchChange" wx:if="{{item.switchActive}}" checked/>
+        <image src="../../assets/img/icon_cell_rightarrow.png" wx:else class="more-cell-right-arrow"></image>
+      </view>
+    </navigator>
+  </view>
 </scroll-view>
