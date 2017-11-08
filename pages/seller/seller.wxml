@@ -1,2 +1,5 @@
 <!--pages/seller/seller.wxml-->
-<text>pages/seller/seller.wxml</text>
+<!-- <text>pages/seller/seller.wxml</text> -->
+<view class="seller-container">
+  <image src="../../assets/img/lufei.jpeg" class="seller-bg"></image>
+</view>

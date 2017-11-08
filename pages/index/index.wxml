@@ -17,7 +17,7 @@
       <text>北京 V</text>
     </navigator>
     <view class="header-input-wrapper">
-      <input placeholder="输入商家、种类、商圈" auto-focus class="header-input" placeholder-class="header-input-placeholder" />
+      <input placeholder="输入商家、种类、商圈"  class="header-input" placeholder-class="header-input-placeholder" />
     </view>
     <view>
       <image src="../../assets/img/icon_homepage_scan.png" class="header-img"></image>
