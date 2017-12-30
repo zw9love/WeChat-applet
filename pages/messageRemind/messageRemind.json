@@ -1,6 +1,5 @@
 {
-    "backgroundColor": "#eee",
     "navigationBarTitleText": "消息提醒",
-    "navigationBarBackgroundColor": "FF6100",
+    "navigationBarBackgroundColor": "#FF6100",
     "navigationBarTextStyle": "white"
 }

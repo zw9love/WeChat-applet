@@ -45,7 +45,7 @@
     </view>
 
     <view class="main-love">
-      <navigator url="{{item.url || '/pages/index/index'}}" class="main-love-cell" wx:for="{{loveData}}" wx:key="{{index}}">
+      <navigator url="{{item.url + '?title=' + item.title}}" class="main-love-cell" wx:for="{{loveData}}" wx:key="{{index}}">
         <image src="{{item.src}}" class="main-love-cell-img"></image>
         <view class="main-love-text">
           <view class="main-love-text-top">
@@ -63,5 +63,4 @@
       </navigator>
     </view>
   </view>
-
 </view>

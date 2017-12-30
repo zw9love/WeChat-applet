@@ -5,7 +5,8 @@
     "pages/mine/mine",
     "pages/seller/seller",
     "pages/logs/logs",
-    "pages/messageRemind/messageRemind"
+    "pages/messageRemind/messageRemind",
+    "pages/show/show"
   ],
   "window": {
     "backgroundTextStyle": "light",

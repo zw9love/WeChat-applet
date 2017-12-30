@@ -14,7 +14,8 @@ Page({
         info: '100元代金券一张，可叠加',
         price: '70',
         index: '100',
-        sellNum: '4666'
+        sellNum: '4666',
+        url: '../../pages/show/show'
       },
       {
         src: '../../assets/img/eat2.png',
@@ -22,7 +23,8 @@ Page({
         info: '101元代金券一张，可叠加',
         price: '70',
         index: '100',
-        sellNum: '4777'
+        sellNum: '4777',
+        url: '../../pages/show/show'
       },
       {
         src: '../../assets/img/eat3.png',
@@ -30,7 +32,8 @@ Page({
         info: '102元代金券一张，可叠加',
         price: '70',
         index: '100',
-        sellNum: '4888'
+        sellNum: '4888',
+        url: '../../pages/show/show'
       },
       {
         src: '../../assets/img/eat4.png',
@@ -38,7 +41,8 @@ Page({
         info: '103元代金券一张，可叠加',
         price: '70',
         index: '100',
-        sellNum: '4999'
+        sellNum: '4999',
+        url: '../../pages/show/show'
       },
       {
         src: '../../assets/img/eat5.png',
@@ -47,7 +51,8 @@ Page({
         price: '70',
         index: '100',
         sellNum: '5099',
-        needOrder: true
+        needOrder: true,
+        url: '../../pages/show/show'
       },
       {
         src: '../../assets/img/eat6.png',
@@ -55,7 +60,8 @@ Page({
         info: '105元代金券一张，可叠加',
         price: '70',
         index: '100',
-        sellNum: '5199'
+        sellNum: '5199',
+        url: '../../pages/show/show'
       },
       {
         src: '../../assets/img/eat7.png',
@@ -64,7 +70,8 @@ Page({
         price: '70',
         index: '100',
         sellNum: '5399',
-        needOrder: true
+        needOrder: true,
+        url: '../../pages/show/show'
       },
       {
         src: '../../assets/img/eat8.png',
@@ -72,7 +79,8 @@ Page({
         info: '666元代金券一张，可叠加',
         price: '66',
         index: '100',
-        sellNum: '5599'
+        sellNum: '5599',
+        url: '../../pages/show/show'
       },
       {
         src: '../../assets/img/eat9.png',
@@ -80,7 +88,8 @@ Page({
         info: '777元代金券一张，可叠加',
         price: '77',
         index: '100',
-        sellNum: '5699'
+        sellNum: '5699',
+        url: '../../pages/show/show'
       },
       {
         src: '../../assets/img/eat10.png',
@@ -88,7 +97,8 @@ Page({
         info: '888元代金券一张，可叠加',
         price: '88',
         index: '100',
-        sellNum: '5899'
+        sellNum: '5899',
+        url: '../../pages/show/show'
       }
     ],
     carouselData: [
@@ -146,6 +156,9 @@ Page({
     })
   },
   onLoad: function () {
+    // 作为小程序的状管理器吧
+    app.globalData.userInfo = '改一下'
+    console.log(app.globalData)
     wx.getSystemInfo({
       success: ({ screenWidth, screenHeight }) => {
         // let { screenWidth, screenHeight } = res
@@ -168,5 +181,11 @@ Page({
       title: '我的首页',
       path: '/page/user?id=123'
     }
+  },
+  onReachBottom	(){
+    // console.log('到达最低了')
+    this.setData({
+      loveData: this.data.loveData.concat(this.data.loveData)    
+    })
   }
 })
