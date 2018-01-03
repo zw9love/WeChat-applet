@@ -104,7 +104,10 @@ Page({
     onlyFromCamera: true,
     wx.scanCode({
       success: (result, scanType, charSet, path) => {
-        console.log(result)
+        // console.log(result)
+        // wx.navigateTo({
+        //   src: path
+        // })
       }
     })
   },

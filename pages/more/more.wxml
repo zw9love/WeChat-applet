@@ -1,9 +1,5 @@
-<!-- <import src="../../components/moreCell/moreCell.wxml" /> -->
-
 <scroll-view scroll-y class="page-container">
-   <!-- <moreCell inner-text="Some text"></moreCell>  -->
-  <!-- <template is="moreCell" data="{{item}}" wx:for="{{mainData}}" wx:key="{{index}}" inner-text="Some text"/> -->
-   <view 
+   <!-- <view 
     class="more-cell" 
     wx:for="{{mainData}}" 
     wx:key="{{index}}" 
@@ -18,5 +14,6 @@
           <image src="../../assets/img/icon_cell_rightarrow.png" wx:else class="more-cell-right-arrow"></image>
         </view>
         </navigator>
-    </view> 
+    </view>  -->
+    <moreCell data="{{item}}" wx:for="{{mainData}}" wx:key="{{index}}" bind:clearCache="clearCache"></moreCell>
 </scroll-view>

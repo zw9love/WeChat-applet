@@ -29,7 +29,8 @@
       </view>
     </navigator>
   </view>
-  <view class="more-cell" wx:for="{{mainData}}" wx:key="{{index}}" style="{{item.style}}" bindtap="clickMoreCell" data-item="{{item}}">
+   <moreCell data="{{item}}" wx:for="{{mainData}}" wx:key="{{index}}"></moreCell> 
+   <!-- <view class="more-cell" wx:for="{{mainData}}" wx:key="{{index}}" style="{{item.style}}" bindtap="clickMoreCell" data-item="{{item}}">
     <navigator url="{{item.url || '/pages/mine/mine'}}" class="more-cell-wapper">
       <image src="{{item.src}}" class="more-cell-image"></image>
       <text>{{item.name}}</text>
@@ -42,5 +43,5 @@
         <image src="../../assets/img/icon_cell_rightarrow.png" wx:else class="more-cell-right-arrow"></image>
       </view>
     </navigator>
-  </view>
+  </view>  -->
 </scroll-view>

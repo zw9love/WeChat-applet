@@ -1,16 +1,14 @@
-<!--components/moreCell/moreCell.wxml-->
-<!-- <template name="moreCell">
-  <view class="more-cell">
-    <text>{{innerText}}</text>
+<view class="more-cell" style="{{data.style}}" bindtap="clickMoreCell" data-item="{{data}}">
+  <navigator url="{{data.url || '/pages/mine/mine'}}" class="more-cell-wapper">
+    <image src="{{data.src}}" class="more-cell-image" wx:if="{{data.src}}"></image>
+    <text>{{data.name}}</text>
     <view class="more-cell-right">
-       <switch bindchange="switchChange" wx:if="{{item.switchActive}}" checked/> 
-      <image src="../../assets/img/icon_cell_rightarrow.png"></image>
+      <view class="more-cell-right-info">
+        <image src="{{data.rightSrc}}" wx:if="{{data.rightSrc}}" class="more-cell-right-img"></image>
+        <text wx:else>{{data.rightInfo}}</text>
+      </view>
+      <switch bindchange="switchChange" wx:if="{{data.switchActive}}" checked/>
+      <image src="../../assets/img/icon_cell_rightarrow.png" class="more-cell-right-arrow"></image>
     </view>
-  </view></template> -->
-  <view class="more-cell">
-    <text>{{innerText}}</text>
-    <view class="more-cell-right">
-      <!-- <switch bindchange="switchChange" wx:if="{{item.switchActive}}" checked/> -->
-      <image src="../../assets/img/icon_cell_rightarrow.png"></image>
-    </view>
-  </view>
+  </navigator>
+</view>
