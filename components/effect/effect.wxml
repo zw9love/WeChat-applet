@@ -1,0 +1,11 @@
+<!--components/effect/effect.wxml-->
+<view class="container" hover-class="navigator-hover">
+  <view class="left-wrapper">
+    <image src="{{data.src}}" class="logo"></image>
+    <text class="info">{{data.title}}</text>
+  </view>
+  <view class="right-wrapper">
+    <text class="info">{{data.info}}</text>
+    <image src="../../assets/img/icon_cell_rightarrow.png" class="logo"></image>
+  </view>
+</view>

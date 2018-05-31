@@ -11,7 +11,7 @@ Page({
       {
         name: "扫一扫",
         style: "margin:20px 0",
-        fnName: 'scanCode'
+        fnName: 'scan'
       }, {
         name: "省流量模式",
         switchActive: true
@@ -39,9 +39,30 @@ Page({
       }
     ]
   },
-  clearCache: function () {
+  scan() {
+    // 允许从相机和相册扫码
+    wx.scanCode({
+      success: (res) => {
+        console.log(res)
+        wx.showToast({
+          title: res.result,
+          icon: 'success',
+          duration: 2000
+        })  
+      },
+      fail: (res) => {
+        wx.showToast({
+          title: '失败',
+          icon: 'success',
+          duration: 2000
+        })
+      },
+    })
+  },
+  clearCache() {
     wx.showLoading({
-      title: '清除緩存中'
+      title: '清除緩存中',
+      mask: true
       // icon: 'success',
       // duration: 2000
     })
@@ -52,7 +73,8 @@ Page({
       wx.showToast({
         title: '成功',
         icon: 'success',
-        duration: 1000
+        duration: 1000,
+        mask: true
       })
     }, 2000)
 
@@ -100,30 +122,18 @@ Page({
 
   },
 
-  scanCode(){
-    onlyFromCamera: true,
-    wx.scanCode({
-      success: (result, scanType, charSet, path) => {
-        // console.log(result)
-        // wx.navigateTo({
-        //   src: path
-        // })
-      }
-    })
-  },
-
-  components: {
-    moreCell: {
-      text: "moreCell demo"
-    }
-  },
-  clickMoreCell(e) {
-    let { name, fnName } = e.currentTarget.dataset.item
-    console.debug(e.currentTarget.dataset.item)
-    if (fnName) {
-      this[fnName]()
-    }
-  },
+  // components: {
+  //   moreCell: {
+  //     text: "moreCell demo"
+  //   }
+  // },
+  // clickMoreCell(e) {
+  //   let { name, fnName } = e.currentTarget.dataset.item
+  //   console.debug(e.currentTarget.dataset.item)
+  //   if (fnName) {
+  //     this[fnName]()
+  //   }
+  // },
   switchChange(e) {
     console.debug(e.detail.value)
   },

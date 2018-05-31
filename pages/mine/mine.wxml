@@ -3,11 +3,13 @@
   <!-- <moreCell inner-text="Some text"></moreCell>  -->
   <!-- <template is="moreCell" data="{{item}}" wx:for="{{mainData}}" wx:key="{{index}}" inner-text="Some text"/> -->
   <view class="header">
-    <image src="../../assets/img/wei.png"></image>
-    <view class="header-textView">
-      <navigator url="/pages/mine/mine">臧杰電商平台</navigator>
-    </view>
-    <!-- <view></view> -->
+    <image src="{{logoSrc}}"></image>
+     <!-- <view class="header-textView" bindtap='login'>
+      <navigator url="/pages/mine/mine">威哥电商平台</navigator>
+    </view>  -->
+    <!-- <open-data type="userNickName" class="header-textView"><navigator url="/pages/mine/mine">威哥电商平台</navigator></open-data> -->
+      <button open-type="getUserInfo" class="header-textView" bindgetuserinfo="login"><text>{{username}}</text></button>
+    <!-- <open-data type="userNickName"></open-data> -->
     <view class="header-right">
       <image src="../../assets/img/icon_cell_rightarrow.png" class="header-right-img"></image>
     </view>

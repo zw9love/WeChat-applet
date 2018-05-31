@@ -1,4 +1,6 @@
 // pages/mine/mine.js
+const app = getApp()
+
 Page({
 
   /**
@@ -48,7 +50,9 @@ Page({
       { name: '威哥卷', num: 100 },
       { name: '评价', num: 99 },
       { name: '收藏', num: 88 },
-    ]
+    ],
+    logoSrc: '../../assets/img/wei.png',
+    username: '请登录'
   },
 
   clickMoreCell(e) {
@@ -57,6 +61,23 @@ Page({
     if (fnName) {
       this[fnName]()
     }
+  },
+  login(res){
+    // console.log(111)
+    // console.log(res.detail.userInfo)
+    let { avatarUrl, nickName } = res.detail.userInfo
+    if (avatarUrl) {
+      this.setData({ logoSrc: avatarUrl, username: nickName })
+    }
+    // wx.login({
+    //   success: function (res) {
+    //     if (res.code) {
+    //       console.log(res)
+    //     } else {
+    //       console.log('登录失败！' + res.errMsg)
+    //     }
+    //   }
+    // });
   },
 
   /**
@@ -70,14 +91,40 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    // console.log(111)
+    // let { avatarUrl, nickName } = app.globalData.userInfo
+    // if (avatarUrl) {
+    //   this.setData({ logoSrc: avatarUrl, username: nickName })
+    // }
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    // let { avatarUrl, nickName } = app.globalData.userInfo
+    // if (avatarUrl) {
+    //   this.setData({ logoSrc: avatarUrl, username: nickName })
+    // }
+    // 查看是否授权
+    wx.getSetting({
+      success: (res) => {
+        // console.log(res)
+        if (res.authSetting['scope.userInfo']) {
+          // this.triggerEvent('login')
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: (res) => {
+              // console.log(res.userInfo)
+              let { avatarUrl, nickName } = res.userInfo
+              if (avatarUrl) {
+                this.setData({ logoSrc: avatarUrl, username: nickName })
+              }
+            }
+          })
+        }
+      }
+    })
   },
 
   /**

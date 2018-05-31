@@ -5,6 +5,7 @@
   background: #FF6100;
   padding: 0 10px;
   display: flex;
+  align-items: center;
 }
 
 .header .header-textView{
@@ -14,6 +15,12 @@
   display: flex;
   font-size: 16px;
   color: #fff;
+  background-color: transparent;
+  /* height: 20px */
+}
+
+.header .header-textView::after{
+  border: none;
 }
 
 .header image{
@@ -64,7 +71,7 @@
   justify-content: center;  
   flex: 1;
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   position: relative
 }
 
@@ -86,14 +93,14 @@
 .order-container-cell {
   flex: 1;
   display:flex; 
-  font-size: 14px;
+  font-size: 12px;
   align-items: center;
   justify-content: center; 
   flex-direction: column;
 }
 
 .order-container-cell image {
-  width: 44px;
-  height: 32px;
+  width: 30px;
+  height: 22px;
   margin-bottom: 5px;
 }

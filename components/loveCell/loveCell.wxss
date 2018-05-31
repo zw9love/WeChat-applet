@@ -1,0 +1,40 @@
+/* components/loveCell/loveCell.wxss */
+.main-love-cell{
+  height: 100px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.main-love-cell-img{
+  width: 95px;
+  height: 80px;
+  border-radius: 6px;
+}
+
+.main-love-text{
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+  margin-left: 10px;
+}
+
+.main-love-text-top{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+.main-love-text-middle{
+  color: #999;
+  margin: 10px 0;
+}
+
+.main-love-text-bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}

@@ -122,6 +122,11 @@ Page({
         { src: '../../assets/img/shfw.png', name: '生活服务' },
       ]
     ],
+    loveEffectData:{
+      title: '猜你喜欢',
+      src: '../../assets/img/cnxh.png',
+      info: '查看全部'
+    },
     indicatorDots: true,
     autoplay: false,
     interval: 5000,
@@ -155,10 +160,33 @@ Page({
       src: '../logs/logs'
     })
   },
+  scan(){
+    // 允许从相机和相册扫码
+    wx.scanCode({
+      success: (res) => {
+        console.log(res)
+        wx.showToast({
+          title: res.result,
+          icon: 'success',
+          duration: 2000
+        })  
+      },
+      fail: (res) => {
+        wx.showToast({
+          title: '失败',
+          icon: 'success',
+          duration: 2000
+        })
+      },  
+    })
+  },
   onLoad: function () {
     // 作为小程序的状管理器吧
     app.globalData.userInfo = '改一下'
-    console.log(app.globalData)
+    // console.log(app.globalData)
+    this.data.tempData = this.data.loveData.slice(0)
+    // wx.startPullDownRefresh()
+    // console.debug(this.data.tempData)
     wx.getSystemInfo({
       success: ({ screenWidth, screenHeight }) => {
         // let { screenWidth, screenHeight } = res
@@ -168,6 +196,19 @@ Page({
         })
       }
     })
+
+    // wx.showShareMenu({
+    //   withShareTicket: true,
+    //   success: function (res) {
+    //     // 分享成功
+    //     console.log('shareMenu share success')
+    //     console.log('分享' + res)
+    //   },
+    //   fail: function (res) {
+    //     // 分享失败
+    //     console.log(res)
+    //   }
+    // })
   },
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo
@@ -176,16 +217,47 @@ Page({
     //   hasUserInfo: true
     // })
   },
+  // onShareAppMessage(){
+  //   return {
+  //     title: '我的首页',
+  //     path: '/page/user?id=123'
+  //   }
+  // },
+  onReachBottom	(){
+    console.log('到达最低了')
+    // wx.showLoading({ title: '加载中', mask: true})
+    // setTimeout(() => {
+      this.setData({ loveData: this.data.loveData.concat(this.data.tempData)})
+    //   wx.hideLoading()
+    // }, 1000)
+  },
+  onPullDownRefresh(){
+    wx.stopPullDownRefresh()
+    setTimeout(() => {
+      wx.showLoading({ title: '重新加载中...', mask: true })
+    }, 0)
+    setTimeout(() => {
+      wx.hideLoading()
+    }, 3000)
+  },
   onShareAppMessage(){
     return {
-      title: '我的首页',
-      path: '/page/user?id=123'
+      title: '威哥电商首页',
+      path: '/pages/index/index',
+      success: function (res) {
+        console.log(res.shareTickets[0])
+        // console.log
+        wx.getShareInfo({
+          shareTicket: res.shareTickets[0],
+          success: function (res) { console.log(res) },
+          fail: function (res) { console.log(res) },
+          complete: function (res) { console.log(res) }
+        })
+      },
+      fail: function (res) {
+        // 分享失败
+        console.log(res)
+      }
     }
-  },
-  onReachBottom	(){
-    // console.log('到达最低了')
-    this.setData({
-      loveData: this.data.loveData.concat(this.data.loveData)    
-    })
   }
 })

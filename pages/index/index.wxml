@@ -19,10 +19,10 @@
     <view class="header-input-wrapper">
       <input placeholder="输入商家、种类、商圈"  class="header-input" placeholder-class="header-input-placeholder" />
     </view>
-    <view>
-      <image src="../../assets/img/icon_homepage_scan.png" class="header-img"></image>
+    <view class="header-cell">
+      <image src="../../assets/img/icon_homepage_scan.png" class="header-img" bindtap="scan"></image>
     </view>
-    <view>
+    <view class="header-cell">
       <image src="../../assets/img/icon_homepage_message.png" class="header-img"></image>
     </view>
   </view>
@@ -30,10 +30,10 @@
   <view class="main">
     <view class="main-carousel">
       <swiper indicator-dots="{{indicatorDots}}" indicator-color="#ccc" indicator-active-color="#FF6100" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height: 180px">
-        <block wx:for="{{carouselData}}" wx:for-item="entry">
+        <block wx:for="{{carouselData}}" wx:for-item="entry" wx:key="{{index}}">
           <swiper-item>
             <view class="carousel-container" style="">
-              <view wx:for="{{entry}}" wx:for-item="item" class="carousel-cell" style="width:{{screenWidth / 5}}px;height: 80px">
+              <view wx:for="{{entry}}" wx:for-item="item" wx:key="{{index}}" class="carousel-cell" style="width:{{screenWidth / 5}}px;height: 80px">
                 <image src="{{item.src}}" class="carousel-cell-img"></image>
                 <text>{{item.name}}</text>
               </view>
@@ -45,22 +45,8 @@
     </view>
 
     <view class="main-love">
-      <navigator url="{{item.url + '?title=' + item.title}}" class="main-love-cell" wx:for="{{loveData}}" wx:key="{{index}}">
-        <image src="{{item.src}}" class="main-love-cell-img"></image>
-        <view class="main-love-text">
-          <view class="main-love-text-top">
-            <text>{{item.title}}</text>
-            <text style="color:#999">>{{item.index}}</text>
-          </view>
-          <view class="main-love-text-middle">
-            <text>{{item.info}}</text>
-          </view>
-          <view class="main-love-text-bottom">
-            <text style="color:#FF6100">￥{{item.price}}</text>
-            <text>已售{{item.sellNum}}</text>
-          </view>
-        </view>
-      </navigator>
+      <effect data="{{loveEffectData}}" />
+      <loveCell data="{{item}}" wx:for="{{loveData}}" wx:key="{{index}}" />
     </view>
   </view>
 </view>

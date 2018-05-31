@@ -1,0 +1,17 @@
+<!--components/loveCell/loveCell.wxml-->
+<navigator url="{{data.url + '?title=' + data.title}}" class="main-love-cell" >
+  <image src="{{data.src}}" class="main-love-cell-img"></image>
+  <view class="main-love-text">
+    <view class="main-love-text-top">
+      <text>{{data.title}}</text>
+      <text style="color:#999">>{{data.index}}</text>
+    </view>
+    <view class="main-love-text-middle">
+      <text>{{data.info}}</text>
+    </view>
+    <view class="main-love-text-bottom">
+      <text style="color:#FF6100">￥{{data.price}}</text>
+      <text>已售  {{data.sellNum}}</text>
+    </view>
+  </view>
+</navigator>

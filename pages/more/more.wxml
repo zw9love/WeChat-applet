@@ -15,5 +15,5 @@
         </view>
         </navigator>
     </view>  -->
-    <moreCell data="{{item}}" wx:for="{{mainData}}" wx:key="{{index}}" bind:clearCache="clearCache"></moreCell>
+    <moreCell data="{{item}}" wx:for="{{mainData}}" wx:key="{{index}}" bind:clearCache="clearCache" bind:scan="scan"></moreCell>
 </scroll-view>

@@ -1,5 +1,12 @@
 {
+  "usingComponents": {
+    "effect": "../../components/effect/effect",
+    "loveCell": "../../components/loveCell/loveCell"
+  },
   "navigationBarTitleText": "首页",
   "navigationBarBackgroundColor": "#FF6100",
-  "navigationBarTextStyle": "white"
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "backgroundTextStyle": "dark"
 }
