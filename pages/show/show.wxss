@@ -1,1 +1,133 @@
 /* pages/show/show.wxss */
+
+.banner {
+  /* background: red; */
+  width: 100%;
+  position: relative;
+}
+
+.banner-image {
+  width: 100%;
+  height: 60px;
+}
+
+.banner-shadow {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  background: rgba(0, 0, 0, 0.4);
+  flex-direction: column;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.banner-shadow-title {
+  color: #fff;
+  font-size: 14px;
+  /* margin-top: 10px; */
+}
+
+.banner-shadow-info {
+  color: #fff;
+  font-size: 12px;
+  /* margin-top: 10px; */
+}
+
+.price-wrapper {
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.price-left-wrapper {
+  margin-left: 10px;
+}
+
+.now-price {
+  color: #ff6100;
+  font-size: 20px;
+}
+
+.store-price {
+  color: #aaa;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.price-right-wrapper {
+  margin-right: 10px;
+}
+
+.price-right-wrapper button {
+  background: #f99c00;
+  color: #fff;
+  font-size: 16px;
+}
+
+.food-info-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+
+.food-info-left, .food-info-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.food-info-cell {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 5px;
+}
+
+.food-info-cell image {
+  width: 15px;
+  height: 15px;
+}
+
+.food-info-cell text {
+  font-size: 13px;
+  margin-left: 5px;
+}
+
+.right-text {
+  color: #b5cc86;
+}
+
+.sell-text {
+  color: #9e9e9e;
+}
+
+.other-wrapper {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  margin-top: 10px;
+}
+
+.other-wrapper text {
+  font-size: 16px;
+  color: #ff6100;
+}
+
+.love-wrapper{
+  width: 100%;
+}

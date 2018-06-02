@@ -1,20 +1,18 @@
-// pages/messageRemind/messageRemind.js
-import { formatTime} from '../../utils/util.js'
+// pages/network/network.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    time: ''
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(formatTime(new Date()))
-    this.setData({ time: formatTime(new Date())})
+  
   },
 
   /**

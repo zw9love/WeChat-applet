@@ -1,0 +1,15 @@
+<!--pages/invitation/invitation.wxml-->
+<view class="container">
+  <view class="invitation-wrapper">
+    <view class="invitation-cell" wx:for="{{mainData}}"
+      wx:key="{{index}}" style="margin: 30px {{margin}}px 0px {{margin}}px" hover-class="navigator-hover"
+    >
+      <image src="{{item.src}}"/>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <view class="info-wrapper">
+    <text>邀请好友扫描二维码使用威哥电商平台</text>
+    <image src="../../assets/img/logoerweima.png" />
+  </view>
+</view>

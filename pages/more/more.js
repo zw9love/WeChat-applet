@@ -19,23 +19,30 @@ Page({
         name: "消息提醒",
         url: '../../pages/messageRemind/messageRemind'
       }, {
-        name: "邀请好友"
+        name: "邀请好友",
+        url: '../../pages/invitation/invitation'
       }, {
         name: "清空缓存",
         fnName: 'clearCache'
       }, {
-        name: "省流量模式详情"
+        name: "省流量模式详情",
+        url: '../../pages/flow/flow'
       }, {
         name: "意见反馈",
-        style: "margin-top: 20px"
+        style: "margin-top: 20px",
+        url: '../../pages/suggest/suggest'
       }, {
-        name: "问卷调查"
+        name: "问卷调查",
+        url: '../../pages/investigation/investigation'
       }, {
-        name: "支付帮助"
+        name: "支付帮助",
+        url: '../../pages/payhelp/payhelp'
       }, {
-        name: "网络诊断"
+        name: "网络诊断",
+        url: '../../pages/network/network'
       }, {
-        name: "关于威哥"
+        name: "关于威哥",
+        url: '../../pages/about/about'
       }
     ]
   },

@@ -13,16 +13,20 @@
 </view> -->
 <view>
   <view class="header">
-    <navigator url="/pages/index/index" class="header-text">
-      <text>北京 V</text>
+    <navigator url="/pages/index/index" class="header-text" bindtap='goAddress'>
+      <text>{{cityName}} V</text>
     </navigator>
-    <view class="header-input-wrapper">
-      <input placeholder="输入商家、种类、商圈"  class="header-input" placeholder-class="header-input-placeholder" />
+    <view class="header-input-wrapper" hover-class="navigator-hover" bindtap='goSearch'>
+      <view class="header-search">
+        <image src="../../assets/img/icon_homepage_search.png"></image>
+        <text>输入商家、种类、商圈</text>
+      </view>
+      <!-- <input placeholder="输入商家、种类、商圈"  class="header-input" placeholder-class="header-input-placeholder" /> -->
     </view>
     <view class="header-cell">
       <image src="../../assets/img/icon_homepage_scan.png" class="header-img" bindtap="scan"></image>
     </view>
-    <view class="header-cell">
+    <view class="header-cell" bindtap='goMessage'>
       <image src="../../assets/img/icon_homepage_message.png" class="header-img"></image>
     </view>
   </view>

@@ -1,20 +1,32 @@
-// pages/messageRemind/messageRemind.js
-import { formatTime} from '../../utils/util.js'
+// pages/invitation/invitation.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    time: ''
+    mainData: [
+      { src: '../../assets/img/share_wechat.png', name: '微信好友' },
+      { src: '../../assets/img/share_wechatfriend.png', name: '微信朋友'},
+      { src: '../../assets/img/share_weibo.png', name: '新浪微博' },
+      { src: '../../assets/img/share_qq.png', name: 'QQ' },
+      { src: '../../assets/img/share_zone.png', name: 'QQ空间' },
+      { src: '../../assets/img/share_more.png', name: '更多' },
+    ],
+    margin: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(formatTime(new Date()))
-    this.setData({ time: formatTime(new Date())})
+    wx.getSystemInfo({
+      success: ({ screenWidth, screenHeight }) => {
+        this.setData({
+          margin: Math.floor((screenWidth - 60 * 3) / 6)
+        })
+      }
+    })
   },
 
   /**

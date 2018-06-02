@@ -1,2 +1,64 @@
 <!--pages/show/show.wxml-->
-<text>{{title}}</text>
+<!-- <text>{{showData}}</text>    -->
+<view class="container">
+
+  <!--  -->
+  <view class="banner">
+    <image src="{{showData.src}}" class="banner-image" style="height: {{height}}px" />
+    <view class="banner-shadow">
+      <text class="banner-shadow-title">{{showData.title}}</text>
+      <text class="banner-shadow-info">{{showData.info}}</text>
+    </view>
+  </view>
+
+  <!--  -->
+  <view class="price-wrapper">
+    <view class="price-left-wrapper">
+      <text class="now-price">￥{{showData.price}}</text>
+      <text class="store-price">门市价￥148</text>
+    </view>
+    <view class="price-right-wrapper">
+      <button>立刻抢购</button>
+    </view>
+  </view>
+
+  <!--  -->
+  <view class="food-info-wrapper">
+    <view class="food-info-left">
+      <view class="food-info-cell">
+        <image src="../../assets/img/yes.png" />
+        <text class="right-text">随时退</text>
+      </view>
+      <view class="food-info-cell">
+        <image src="../../assets/img/yes.png" />
+        <text class="right-text">随时退</text>
+      </view>
+    </view>
+    <view class="food-info-right">
+      <view class="food-info-cell">
+        <image src="../../assets/img/person.png" />
+        <text class="sell-text">已售{{showData.sellNum}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!--  -->
+  <view class="evaluate-wrapper">
+      <view class="evaluate-left-wrapper">
+        
+      </view>
+      <view class="evaluate-right-wrapper">
+      </view>
+  </view>
+
+  <!--  -->
+  <view class="other-wrapper">
+    <text>其他人也看过</text>
+  </view>
+
+  <!--  -->
+  <view class="love-wrapper">
+    <loveCell data="{{item}}" wx:for="{{loveData}}" wx:key="{{index}}" />
+  </view>
+
+</view>

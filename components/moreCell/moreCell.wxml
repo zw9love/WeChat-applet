@@ -1,4 +1,4 @@
-<view class="more-cell" style="{{data.style}}" bindtap="clickMoreCell" data-item="{{data}}">
+<view class="more-cell" style="{{data.style}}" bindtap="clickMoreCell" data-item="{{data}}" hover-class="navigator-hover">
   <navigator url="{{data.url || '/pages/mine/mine'}}" class="more-cell-wapper">
     <image src="{{data.src}}" class="more-cell-image" wx:if="{{data.src}}"></image>
     <text>{{data.name}}</text>

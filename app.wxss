@@ -1,6 +1,6 @@
 /**app.wxss**/
 /* more-cell样式  */
-@import "/components/moreCell/moreCell.wxss";
+/* @import "/components/moreCell/moreCell.wxss"; */
 
 
 Page{
@@ -19,7 +19,12 @@ Page{
   flex-direction: column;
   align-items: center;
   justify-content: space-between; 
-  padding: 200rpx 0;
+  /* padding: 200rpx 0; */
   box-sizing: border-box;
   /* background: #eee; */
 } 
+
+/* .navigator-hover{
+  background-color: rgba(0, 0, 0, 0.1); 
+  opacity: 0.7;
+} */

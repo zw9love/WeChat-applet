@@ -1,0 +1,18 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <view class="search">
+    <!-- <image src="../../assets/img/navigationbar_arrow_up.png" class="back" bindtap='goback'/> -->
+    <input placeholder="输入商家、种类、商圈"  class="search-input" placeholder-class="search-input-placeholder"/>
+    <text>搜索</text>
+  </view>
+  <view class="hot">
+    <view class="hot-top">
+      <text>热门搜索</text>
+    </view>
+    <view class="hot-bottom">
+      <view class="hot-search-cell" wx:for="{{searchList}}" wx:key="{{index}}" hover-class="navigator-hover" style="{{searchCellStyle}}">
+        <text>{{item}}</text>
+      </view>
+    </view>
+  </view>
+</view>

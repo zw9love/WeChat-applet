@@ -1,5 +1,5 @@
 <!--components/loveCell/loveCell.wxml-->
-<navigator url="{{data.url + '?title=' + data.title}}" class="main-love-cell" >
+<navigator url="{{data.url + '?title=' + data.title}}" class="main-love-cell" bindtap='goShow'>
   <image src="{{data.src}}" class="main-love-cell-img"></image>
   <view class="main-love-text">
     <view class="main-love-text-top">

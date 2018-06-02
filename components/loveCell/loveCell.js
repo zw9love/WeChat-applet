@@ -1,4 +1,5 @@
 // components/loveCell/loveCell.js
+const app = getApp()
 Component({
   /**
    * 组件的属性列表
@@ -22,6 +23,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    goShow(){
+      // console.log(this.data.data)
+      // console.log(app.globalData)
+      app.globalData.showData  = this.data.data
+    }
   }
 })

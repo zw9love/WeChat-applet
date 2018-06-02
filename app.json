@@ -1,12 +1,22 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/show/show",
+    "pages/order/order",
+    "pages/invitation/invitation",
+    "pages/address/address",
+    "pages/search/search",
     "pages/mine/mine",
     "pages/more/more",
     "pages/seller/seller",
     "pages/logs/logs",
     "pages/messageRemind/messageRemind",
-    "pages/show/show"
+    "pages/flow/flow",
+    "pages/suggest/suggest",
+    "pages/investigation/investigation",
+    "pages/payhelp/payhelp",
+    "pages/network/network",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",

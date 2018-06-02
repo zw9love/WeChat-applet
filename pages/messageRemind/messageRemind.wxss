@@ -1,1 +1,44 @@
 /* pages/messageRemind/messageRemind.wxss */
+
+.container{
+  flex-direction: row;
+  padding: 10px;
+  background: #fff;
+}
+
+.left-wrapper {
+
+}
+
+.left-wrapper image {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.right-wrapper{
+  margin-left: 10px
+}
+
+.right-wrapper .right-top-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.title{
+  font-size: 14px;
+}
+
+.time, .info{
+  font-size: 13px;
+  color: #ccc;
+}
+
+.right-bottom-wrapper{
+  display: flex;
+  margin-top: 5px;
+}
+
+.info{
+  line-height: 20px;
+}

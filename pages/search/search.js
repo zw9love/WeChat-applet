@@ -1,20 +1,31 @@
-// pages/messageRemind/messageRemind.js
-import { formatTime} from '../../utils/util.js'
+// pages/search/search.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    time: ''
+    searchList: ['自助', '代金券', '休闲娱乐', '电影', '旅游', '酒店', '运动健身', 'KTV', '丽人'],
+    searchCellStyle: ""
+  },
+
+  goback(){
+    wx.navigateBack()
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(formatTime(new Date()))
-    this.setData({ time: formatTime(new Date())})
+    wx.getSystemInfo({
+      success: ({ screenWidth, screenHeight }) => {
+        // console.log(screenWidth)
+        // this.searchCellStyle = { width: (screenWidth - 40) / 3}
+        this.setData({
+          searchCellStyle: "width: " + Math.floor((screenWidth - 40) / 3) + "px"
+        })
+      }
+    })
   },
 
   /**

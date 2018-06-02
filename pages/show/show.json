@@ -1,4 +1,7 @@
 {
+  "usingComponents": {
+    "loveCell": "../../components/loveCell/loveCell"
+  },
   "navigationBarTitleText": "详情页",
   "navigationBarBackgroundColor": "#FF6100",
   "navigationBarTextStyle": "white"

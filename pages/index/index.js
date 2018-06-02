@@ -122,7 +122,7 @@ Page({
         { src: '../../assets/img/shfw.png', name: '生活服务' },
       ]
     ],
-    loveEffectData:{
+    loveEffectData: {
       title: '猜你喜欢',
       src: '../../assets/img/cnxh.png',
       info: '查看全部'
@@ -132,7 +132,8 @@ Page({
     interval: 5000,
     duration: 1000,
     screenWidth: 0,
-    screenHeight: 0
+    screenHeight: 0,
+    cityName: ''
   },
   changeIndicatorDots: function (e) {
     this.setData({
@@ -155,12 +156,27 @@ Page({
     })
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     wx.navigateTo({
-      src: '../logs/logs'
+      url: '../logs/logs'
     })
   },
-  scan(){
+  goMessage(){
+    wx.navigateTo({
+      url: '../messageRemind/messageRemind'
+    })
+  },
+  goAddress(){
+    wx.navigateTo({
+      url: '../address/address'
+    })
+  },
+  goSearch() {
+    wx.navigateTo({
+      url: '../search/search'
+    })
+  },
+  scan() {
     // 允许从相机和相册扫码
     wx.scanCode({
       success: (res) => {
@@ -169,7 +185,7 @@ Page({
           title: res.result,
           icon: 'success',
           duration: 2000
-        })  
+        })
       },
       fail: (res) => {
         wx.showToast({
@@ -177,12 +193,12 @@ Page({
           icon: 'success',
           duration: 2000
         })
-      },  
+      },
     })
   },
   onLoad: function () {
     // 作为小程序的状管理器吧
-    app.globalData.userInfo = '改一下'
+    // app.globalData.userInfo = '改一下'
     // console.log(app.globalData)
     this.data.tempData = this.data.loveData.slice(0)
     // wx.startPullDownRefresh()
@@ -192,7 +208,7 @@ Page({
         // let { screenWidth, screenHeight } = res
         this.setData({
           screenWidth: screenWidth,
-          screenHeight: screenHeight
+          screenHeight: screenHeight,
         })
       }
     })
@@ -210,7 +226,16 @@ Page({
     //   }
     // })
   },
-  getUserInfo: function(e) {
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    this.setData({
+      cityName: app.globalData.cityName
+    })
+  },
+  getUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo
     // this.setData({
     //   userInfo: e.detail.userInfo,
@@ -223,15 +248,15 @@ Page({
   //     path: '/page/user?id=123'
   //   }
   // },
-  onReachBottom	(){
+  onReachBottom() {
     console.log('到达最低了')
     // wx.showLoading({ title: '加载中', mask: true})
     // setTimeout(() => {
-      this.setData({ loveData: this.data.loveData.concat(this.data.tempData)})
+    this.setData({ loveData: this.data.loveData.concat(this.data.tempData) })
     //   wx.hideLoading()
     // }, 1000)
   },
-  onPullDownRefresh(){
+  onPullDownRefresh() {
     wx.stopPullDownRefresh()
     setTimeout(() => {
       wx.showLoading({ title: '重新加载中...', mask: true })
@@ -240,7 +265,7 @@ Page({
       wx.hideLoading()
     }, 3000)
   },
-  onShareAppMessage(){
+  onShareAppMessage() {
     return {
       title: '威哥电商首页',
       path: '/pages/index/index',

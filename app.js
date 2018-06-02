@@ -18,6 +18,11 @@ App({
     logs.unshift(Date.now())
     // wx.setStorageSync('logs', logs)
 
+    wx.setTabBarBadge({
+      index: 2,
+      text: '99'
+    })
+
     // 登录
     wx.login({
       success: res => {
@@ -48,6 +53,16 @@ App({
   },
   globalData: {
     userInfo: null,
-    name: '大熊'
+    name: '大熊',
+    cityName:  '北京',
+    showData: {
+      src: '../../assets/img/eat2.png',
+      title: '美食美食2',
+      info: '101元代金券一张，可叠加',
+      price: '70',
+      index: '100',
+      sellNum: '4777',
+      url: '../../pages/show/show'
+    },
   }
 })

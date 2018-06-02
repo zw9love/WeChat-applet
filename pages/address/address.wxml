@@ -1,0 +1,23 @@
+<!--pages/address/address.wxml-->
+<scroll-view class="container" scroll-with-animation="{{scrollActive}}" scroll-y="{{scrollActive}}" 
+scroll-top="{{scrollTop}}" enable-back-to-top="{{scrollActive}}">
+  <view class="letter-wrapper" style="height: {{windowHeight}}px">
+    <!-- <text wx:for="{{letterData}}" wx:key="{{index}}"  wx:for-item="item" hover-class="navigator-hover" >{{item}}</text>  -->
+    <view>
+      <view class="letter-wrapper-cell" wx:for="{{letterData}}" wx:key="{{index}}"  wx:for-item="item" hover-class="none" bindtap="jump" data-key="{{index}}" data-main-data="{{mainData}}">
+          <text>{{item}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="address-cell" wx:for="{{mainData}}" wx:key="{{index}}"  wx:for-item="item">
+    <view class="address-cell-title">
+      <text>{{item.title}}</text>
+    </view>
+    <view class="address-cell-info">
+      <view class="address-city-cell" wx:for="{{item.city}}" wx:key="{{item.index}}" wx:for-item="entry" hover-class="navigator-hover" bindtap='selectCity' data-entry="{{entry}}">
+         <image src='../../assets/img/wei.png'></image> 
+        <text>{{entry.name}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
