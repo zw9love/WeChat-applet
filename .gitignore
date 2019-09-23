@@ -1,0 +1,14 @@
+.idea
+PRD_Appid
+.idea/inspectionProfiles/
+.idea/moco-mini-app.iml
+dist/
+node_modules/
+.idea/
+store_shop_brand.txt
+package-lock.json
+/doc
+/server
+/周报
+/gulpCss.js
+sitemap.json
